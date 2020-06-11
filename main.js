@@ -377,12 +377,225 @@ function create_radar2() {
         width: '100%'
       });
 }
+
+function graph_mean_rating() {
+
+    Highcharts.chart('mean_rating_chart', {
+        chart: {backgroundColor: '#f3e5e5'},
+        title: {text: 'Average Rating of Movies per Year',
+                  style: {
+                      color: 'black',
+                      fontSize: 20,
+                  }
+              },
+              subtitle: {
+                  text: 'Source: <a href="https://www.kaggle.com/ruchi798/movies-on-netflix-prime-video-hulu-and-disney">Kaggle.com</a>',
+                  style: {
+                      color: 'black',
+                      fontSize: 10,
+                  }
+              },
+      
+        yAxis: {
+          title: {
+            text: 'Number of Movies'
+          }
+        },
+      
+        xAxis: {
+          categories: [1940, 1950, 1960, 1970, 1980, 1990, 2000, 2010]
+        },
+      
+        legend: {
+          layout: 'vertical',
+          align: 'right',
+          verticalAlign: 'middle'
+        },
+        credits: {
+            enabled: false
+        },
+        series: [{
+          name: 'Amazon Prime Video',
+          data: [6.070111731843572, 5.849853372434021, 5.760955056179775, 5.879126875852655, 5.89137134052389, 5.874593967517407, 5.736349574632645, 5.709177101967792]
+      ,
+          color: '#001a33'
+        }, {
+          name: 'Disney Plus',
+          data: [6.855555555555555, 7.204347826086955, 6.913043478260868, 6.329411764705882, 6.817142857142858, 6.139603960396042, 6.101714285714285, 6.707741935483871],
+          color: '#336699'
+        }, {
+          name: 'Netflix',
+          data: [6.71818181818182, 6.05, 7.616666666666667, 6.797142857142856, 6.864705882352942, 6.534959349593497, 6.45971563981043, 6.182522522522526]
+      ,
+          color: '#ff3333'
+        }, {
+          name: 'Hulu',
+          data: [6.8, 6.5, 6.950000000000001, 6.9, 6.611538461538462, 6.200000000000001, 6.541732283464566, 6.012593703148426]
+      ,
+          color: '#99cc33'
+        }],
+      
+        responsive: {
+          rules: [{
+            condition: {
+              maxWidth: 500
+            },
+            chartOptions: {
+              legend: {
+                layout: 'horizontal',
+                align: 'center',
+                verticalAlign: 'bottom'
+              }
+            }
+          }]
+        }
+      
+      });
+}
+
+function graph_num_movies() {
+
+    Highcharts.chart('num_movies_chart', {
+        chart: {backgroundColor: '#f3e5e5'},
+
+        title: {text: 'Number of Movies per Year',
+                  style: {
+                      color: 'black',
+                      fontSize: 20,
+                  }
+              },
+              subtitle: {
+                  text: 'Source: <a href="https://www.kaggle.com/ruchi798/movies-on-netflix-prime-video-hulu-and-disney">Kaggle.com</a>',
+                  style: {
+                      color: 'black',
+                      fontSize: 10,
+                  }
+              },
+      
+        yAxis: {
+          title: {
+            text: 'Number of Movies'
+          }
+        },
+      
+        xAxis: {
+          categories: [1940, 1950, 1960, 1970, 1980, 1990, 2000, 2010]
+        },
+      
+        legend: {
+          layout: 'vertical',
+          align: 'right',
+          verticalAlign: 'middle'
+        },
+        credits: {
+            enabled: false
+        },
+        series: [{
+          name: 'Amazon Prime Video',
+          data: [11, 2, 6, 35, 68, 123, 422, 2775],
+          color: '#001a33'
+        }, {
+          name: 'Disney Plus',
+          data: [3, 7, 4, 11, 26, 46, 127, 667],
+          color: '#336699'
+        }, {
+          name: 'Netflix',
+          data: [358, 341, 356, 733, 649, 862, 2586, 5590],
+          color: '#ff3333'
+        }, {
+          name: 'Hulu',
+          data: [9, 23, 23, 34, 35, 101, 175, 155],
+          color: '#99cc33'
+        }],
+      
+        responsive: {
+          rules: [{
+            condition: {
+              maxWidth: 500
+            },
+            chartOptions: {
+              legend: {
+                layout: 'horizontal',
+                align: 'center',
+                verticalAlign: 'bottom'
+              }
+            }
+          }]
+        }
+      
+    });
+}
+function chart_top_movies() {
+    // Radialize the colors
+  Highcharts.setOptions({
+    colors: Highcharts.map(Highcharts.getOptions().colors, function (color) {
+      return {
+        radialGradient: {
+          cx: 0.5,
+          cy: 0.3,
+          r: 0.7
+        },
+        stops: [
+          [0, color],
+          [1, Highcharts.color(color).brighten(-0.3).get('rgb')] // darken
+        ]
+      };
+    })
+  });
+  
+  // Build the chart
+  Highcharts.chart('top_movies_chart', {
+    chart: {
+      backgroundColor: '#f3e5e5',
+      plotBorderWidth: null,
+      plotShadow: false,
+      type: 'pie'
+    },
+    title: {
+      text: 'Movies with rating larger than 8'
+    },
+    tooltip: {
+      pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    accessibility: {
+      point: {
+        valueSuffix: '%'
+      }
+    },
+    plotOptions: {
+      pie: {
+        allowPointSelect: true,
+        cursor: 'pointer',
+        dataLabels: {
+          enabled: true,
+          format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+          connectorColor: 'silver'
+        }
+      }
+    },
+    credits: {
+        enabled: false
+    },
+    series: [{
+      name: 'Share',
+      data: [
+        { name: 'Netflix', y: 86, color: '#ff3333'},
+        { name: 'Hulu', y: 14, color: '#99cc33'},
+        { name: 'Prime Video', y: 172, color: '#001a33' },
+        { name: 'Disney+', y:10, color: '#336699'}
+      ]
+    }]
+  });
+}
         
 function init() {
     graph_averages();
     graph_totals();
     create_radar1();
     create_radar2();
+    graph_num_movies();
+    graph_mean_rating();
+    chart_top_movies();
 }
 
 document.addEventListener('DOMContentLoaded', init, false);
