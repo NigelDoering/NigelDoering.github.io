@@ -145,8 +145,8 @@ function graph_totals() {
 }
 
 
-/* Creating a radar chart */
-function create_radar() {
+/* Creating a radar chart for age groups*/
+function create_radar1() {
     var myConfig = {
             type: 'radar',
             backgroundColor: '#f3e5e5',
@@ -243,17 +243,146 @@ function create_radar() {
     
     // Rendering the chart
     zingchart.render({
-        id: 'myChart',
+        id: 'radar1',
         data: myConfig,
         height: '100%',
         width: '100%',
     });
 }
+
+/* Creating another radar chart for age of movies */
+/* Creating a radar chart */
+function create_radar2() {
+    var myConfig = {
+        "graphset": [{
+          "type": "bar",
+          "background-color": '#f3e5e5',
+          "title": {
+            "text": "Total Amount of Shows for Each Era",
+            "font-color": "black",
+            "backgroundColor": '#f3e5e5',
+            "font-size": "22px",
+            "alpha": 1,
+            "adjust-layout": true,
+          },
+          "plotarea": {
+            "margin": "dynamic"
+          },
+          "legend": {
+            "layout": "x4",
+            "alpha": 0.05,
+            "shadow": false,
+            "align": "center",
+            "adjust-layout": true,
+            "marker": {
+              "type": "circle",
+              "border-color": "none",
+              "size": "10px"
+            },
+            "border-width": 0,
+            "maxItems": 3,
+            "toggle-action": "hide",
+
+          },
+          "plot": {
+            "bars-space-left": 0.15,
+            "bars-space-right": 0.15,
+            "animation": {
+              "effect": "ANIMATION_SLIDE_BOTTOM",
+              "sequence": 0,
+              "speed": 800,
+              "delay": 800
+            }
+          },
+          "scale-y": {
+            "line-color": "#7E7E7E",
+            "item": {
+              "font-color": "#7e7e7e"
+            },
+            "values": "0:1800:10",
+            "guide": {
+              "visible": true
+            },
+            "label": {
+              "text": "Number of Shows",
+              "font-family": "arial",
+              "bold": true,
+              "font-size": "14px",
+              "font-color": "#7E7E7E",
+            },
+          },
+          "scaleX": {
+            "values": [
+              "Pre 80s",
+              "80s and 90s",
+              "Post 2000s",
+            ],
+            "placement": "default",
+            "tick": {
+              "size": 58,
+              "placement": "cross"
+            },
+            "itemsOverlap": true,
+            "item": {
+              "offsetY": -55
+            }
+          },
+          tooltip: {
+            text: "%t %v Shows"
+          },
+          "series": [{
+              "values": [
+                9, 53, 1749
+              ],
+              "alpha": 0.95,
+              "borderRadiusTopLeft": 7,
+              "background-color": '#ff3333',
+              "text": "Netflix",
+            },
+            {
+              "values": [
+                60, 150, 1307
+              ],
+              "borderRadiusTopLeft": 7,
+              "alpha": 0.95,
+              "background-color": '#99cc33',
+              "text": "Hulu"
+            },
+            {
+              "values": [
+                76, 183, 1048
+              ],
+              "alpha": 0.95,
+              "borderRadiusTopLeft": 7,
+              "background-color": '#001a33',
+              "text": "Prime Video"
+            },
+            {
+              "values": [
+                2, 29, 138
+              ],
+              "borderRadiusTopLeft": 7,
+              "alpha": 0.95,
+              "background-color": '#336699',
+              "text": "Disney+"
+            },
+          ]
+        }]
+      };
+       
+      zingchart.render({
+        id: 'radar2',
+        data: myConfig,
+        height: '100%',
+        width: '100%'
+      });
+}
         
 function init() {
     graph_averages();
     graph_totals();
-    create_radar();
+    create_radar1();
+    create_radar2();
 }
 
 document.addEventListener('DOMContentLoaded', init, false);
