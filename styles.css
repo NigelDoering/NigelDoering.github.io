@@ -68,9 +68,7 @@ body {
   padding-top: 10%;
   padding-bottom: 0;
 }
-.analysis {
-  padding-top: 0;
-}
+
 
 /* puting radar and title in flex box */
 .radar-parent--container {
@@ -106,5 +104,9 @@ body {
 #conclusion {
   padding-top: 0;
   margin-bottom: 20%
+}
+#analysis-final {
+  margin-left: 2%;
+  margin-right: 2%;
 }
 
