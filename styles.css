@@ -101,12 +101,36 @@ body {
   margin-top: 5%;
   margin-right: 2%
 }
-#conclusion {
+.bg-last {
+  /* The image used */
+  background-image: url("data/netflix_logo.png");
+
+  /* Full height */
+  height: 85%;
+  
+  /* Center and scale the image nicely */
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-left: 15px;
   padding-top: 0;
-  margin-bottom: 20%
+  margin-bottom: 4%;
+  margin-top: 5%;
 }
 #analysis-final {
   margin-left: 2%;
   margin-right: 2%;
+}
+.title-last {
+  color: white;
+  text-align: center;
+  font-size: 65px;
+  padding-top: 4%;
+  
+}
+.analysis-last {
+  color: white;
+  text-align: center;
+  padding-top: 285px
 }
 
