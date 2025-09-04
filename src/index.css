@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body, #root { height: 100%; }
+  body { @apply bg-earth-50 text-earth-900 antialiased text-xl; } /* text-lg = larger font */
+  
+  a { @apply text-brand-600 hover:text-brand-700 underline-offset-4 hover:underline; }
+
+  /* Accessible focus rings for light bg */
+  :focus-visible { @apply outline-none ring-2 ring-offset-2 ring-brand-400 ring-offset-earth-50; }
+
+  ::selection { @apply bg-meadow-300 text-earth-900; }
+}
+
