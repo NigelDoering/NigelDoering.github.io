@@ -254,7 +254,7 @@ export default function App() {
         <p className="mt-3 text-earth-700 leading-relaxed">
           My research centers on building robust and safe machine learning systems. Specifically, I develop
           novel evaluation frameworks for LLMs and LLM agents, drawing on theory from social psychology,
-          anthropology, and human cooperation. I’m also interested in human-AI interaction—how AI
+          theory of mind, anthropology, and human cooperation. I’m also interested in human-AI interaction—how AI
           technologies affect people, and people shape them in turn—with the goal of building technologies
           and systems that have a beneficial impact on human well-being.
         </p>
