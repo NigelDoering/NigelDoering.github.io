@@ -3,19 +3,20 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        // Rose: pastel tints (50–300) for surfaces, deeper shades (600+) for readable text/buttons.
         brand: {
-          DEFAULT: "#1f6f78",
-          50:"#ecfcf7",100:"#d6f5ec",200:"#b3eadc",300:"#86d8c7",
-          400:"#54bead",500:"#2aa597",600:"#1f6f78",700:"#195a61",
-          800:"#153e43",900:"#0f2c30",
+          DEFAULT: "#b84a6f",
+          50:"#fdf2f5",100:"#fbe4ea",200:"#f7cbd7",300:"#f0a9bd",
+          400:"#e6879f",500:"#d4678a",600:"#b84a6f",700:"#993a5b",
+          800:"#7a2f49",900:"#5c2437",
         },
-        skyish: { 400:"#60a5fa", 600:"#2563eb" },
-        meadow: { 300:"#a7f3d0", 500:"#10b981" },
+        skyish: { 400:"#c4537a", 600:"#993a5b" }, // link colors
+        meadow: { 300:"#f7cbd7", 500:"#e6879f" }, // text selection
         earth: {
-          50:"#f7f6f2",   // pastel sand (bg)
-          100:"#efeee8",
-          200:"#e6e4db",
-          300:"#e7e5e4",  // you already had
+          50:"#fcf7f8",   // blush (bg)
+          100:"#f6eef0",
+          200:"#ecdfe3",
+          300:"#e7e5e4",
           600:"#57534e",
           900:"#1c1917",
         },

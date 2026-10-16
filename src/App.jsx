@@ -36,7 +36,7 @@ const publications = [
   {
     year: 2026,
     title: "Neuro-Mechanistic Latent Dynamics: Cognitive Load as a Generalizable Neural Stability Margin",
-    venue: "Rejected, NeurIPS 2026 — revising for resubmission",
+    venue: "In revision for resubmission",
     authors: ["M Tanjid Hasan Tonmoy", "Nigel Doering", "Ilya Parker", "Ramesh Bharadwaj", "Tauhidur Rahman"],
     links: [],
   },
@@ -209,6 +209,20 @@ export default function App() {
       <main className="mx-auto max-w-screen px-4">
         <section className="py-14">
           <div className="rounded-xl2 border border-earth-200 bg-white p-8 shadow-soft">
+          <div className="flex flex-col md:flex-row gap-8 md:gap-10">
+            <figure className="w-56 md:w-64 shrink-0 mx-auto md:mx-0">
+              <img
+                src="/bjj-stripes.jpg"
+                alt="Nigel and his wife in jiu jitsu gis, each holding up a white belt with a new stripe"
+                width="640"
+                height="854"
+                className="w-full rounded-xl2 shadow-soft"
+              />
+              <figcaption className="mt-3 text-sm text-earth-600 text-center italic leading-snug">
+                My wife and I just earned our first stripes in BJJ.
+              </figcaption>
+            </figure>
+            <div className="min-w-0">
             <p className="text-sm text-earth-600/80 uppercase tracking-widest">
               UC San Diego · PhD Student
             </p>
@@ -298,12 +312,14 @@ export default function App() {
                 <Linkedin size={18}/> LinkedIn
               </a>
               <a
-                href="nigel.doering@gmail.com"
+                href="mailto:nigel.doering@gmail.com"
                 className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-earth-200 hover:bg-earth-100"
               >
                 <Mail size={18}/> Email
               </a>
             </div>
+            </div>
+          </div>
           </div>
         </section>
 
