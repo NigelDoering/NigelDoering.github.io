@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Raw photos (web-ready copies live in public/)
+*.heic
+*.HEIC

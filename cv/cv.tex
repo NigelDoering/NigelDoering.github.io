@@ -1,0 +1,172 @@
+\documentclass[11pt,letterpaper]{article}
+
+% ── Layout & fonts ───────────────────────────────────────────
+\usepackage[margin=0.9in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{XCharter}
+\usepackage[scaled=0.92]{helvet}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{needspace}
+\usepackage[hidelinks]{hyperref}
+
+\definecolor{cvblue}{HTML}{1F3A63}
+\definecolor{cvrule}{HTML}{A9B7CC}
+\definecolor{cvlink}{HTML}{2F5596}
+\definecolor{cvdot}{HTML}{9AA9BF}
+
+\pagestyle{plain}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+% ── Section headings: blue sans, thin rule underneath ────────
+\titleformat{\section}{\needspace{5\baselineskip}\sffamily\bfseries\large\color{cvblue}}{}{0pt}{}[\vspace{-0.6em}{\color{cvrule}\rule{\linewidth}{0.6pt}}]
+\titlespacing*{\section}{0pt}{0.9em}{0.5em}
+
+\setlist[itemize]{leftmargin=1.4em, itemsep=1pt, topsep=3pt, parsep=0pt}
+
+% ── Helpers ──────────────────────────────────────────────────
+\newcommand{\sep}{\enspace{\color{cvdot}\textbullet}\enspace}
+\newcommand{\lnk}[2]{\href{#1}{\color{cvlink}[#2]}}
+
+% \entry{Org}{Location}{Role}{Dates}
+\newcommand{\entry}[4]{%
+  \textbf{#1}\hfill #2\\
+  \textit{#3}\hfill #4\par}
+
+% \pub{citation text} — hanging indent
+\newcommand{\pub}[1]{%
+  {\hangindent=1.6em\hangafter=1 #1\par}\vspace{0.45em}}
+
+% ============================================================
+\begin{document}
+
+\begin{center}
+  {\sffamily\bfseries\fontsize{24}{28}\selectfont\color{cvblue} Nigel Doering}\\[0.35em]
+  {\large PhD Student in Data Science \sep UC San Diego}\\[0.25em]
+  {\small Halıcıoğlu Data Science Institute (HDSI) \sep
+   \href{mailto:nigel.doering@gmail.com}{\color{cvlink}nigel.doering@gmail.com} \sep (231) 920-5735}
+\end{center}
+
+% ------------------------------------------------------------
+\section{Education}
+
+\textbf{University of California, San Diego}\\
+\textit{Halıcıoğlu School of Data Science and Computing — Ph.D.\ in Data Science}\hfill 2024 – present
+\begin{itemize}
+  \item Advisor: Tauhidur Rahman (MOSAIC Lab) \quad Co-Advisor: David Danks
+\end{itemize}
+\vspace{0.4em}
+
+\textbf{University of California, San Diego}\\
+\textit{Halıcıoğlu Data Science Institute — M.S.\ in Data Science}\hfill 2021 – 2023
+\begin{itemize}
+  \item Advisor: David Danks
+\end{itemize}
+\vspace{0.4em}
+
+\textbf{University of California, San Diego}\\
+\textit{Halıcıoğlu Data Science Institute — B.S.\ in Data Science}\hfill 2017 – 2021
+
+% ------------------------------------------------------------
+\section{Publications}
+
+\pub{Doering, N.~F.; Norman, J.; Danks, D.; and Rahman, T. 2026.
+\textit{Arguing Ethics with a Machine: An AI Chatbot's Ethical Position Is a Property of the System, Not the Model}.
+Under review, ACM CHI Conference on Human Factors in Computing Systems (CHI 2027).}
+
+\pub{Doering, N.~F.; Malladi, R.; Sangwan, A.; Tonmoy, M.~T.~H.; Doan, J.; Danks, D.; and Rahman, T. 2026.
+\textit{Structured Machine Theory of Mind from Agent Trajectories}.
+Transactions on Machine Learning Research (TMLR).
+\lnk{https://openreview.net/forum?id=PfSNLg0zcK}{OpenReview}
+\lnk{https://github.com/NigelDoering/structured-machine-tom}{Code}.}
+
+\pub{Doering, N.~F.; Malladi, R.; Sangwan, A.; Danks, D.; and Rahman, T. 2026.
+\textit{HiVAE: Hierarchical Latent Variables for Scalable Theory of Mind}.
+In Proceedings of the Theory of Mind for AI Workshop at the Fortieth AAAI Conference on Artificial Intelligence (AAAI-26). Singapore.
+\lnk{https://arxiv.org/abs/2602.16826}{arXiv}.}
+
+\pub{Oshim, M.~F.~T.; Doering, N.; Islam, B.; Weng, T.-W.; and Rahman, T. 2025.
+\textit{Anti-Sensing: Defense against Unauthorized Radar-based Human Vital Sign Sensing with Physically Realizable Wearable Oscillators}.
+In Proceedings of the IEEE International Conference on Robotics and Automation (ICRA 2025), 1990–1996.
+\href{https://doi.org/10.1109/ICRA55743.2025.11127941}{\color{cvlink}doi:10.1109/ICRA55743.2025.11127941}.
+\lnk{https://arxiv.org/abs/2505.10864}{arXiv}.}
+
+\pub{Doering, N.~F.; and Norman, J.~D. 2025.
+\textit{A FASPE Perspective on LLM-Based Chatbots}.
+FASPE Journal 2025 (Fellowships at Auschwitz for the Study of Professional Ethics), Design \& Technology, 64–75.
+\lnk{https://www.faspe-ethics.org/wp-content/uploads/2026/03/FASPE_2025Journal.pdf}{PDF}.}
+
+\pub{Doering, N. 2023.
+\textit{Master's Thesis: Towards Anomalous Group Discovery in Maritime AIS Data}.
+UC San Diego eScholarship.
+\lnk{https://escholarship.org/uc/item/77v9d9kz}{eScholarship}.}
+
+\pub{Doering, N.; Gorlla, C.; Tuttle, T.; and Vijay, A. 2023.
+\textit{Empirical Analysis of Efficient Fine-Tuning Methods for Large Pre-Trained Language Models}.
+arXiv preprint arXiv:2401.04051.
+\lnk{https://arxiv.org/abs/2401.04051}{arXiv}.}
+
+% ------------------------------------------------------------
+\section{Works in Progress}
+
+\pub{Tonmoy, M.~T.~H.; Doering, N.~F.; Parker, I.; Bharadwaj, R.; and Rahman, T.
+\textit{Neuro-Mechanistic Latent Dynamics: Cognitive Load as a Generalizable Neural Stability Margin}.
+Manuscript in revision for resubmission.}
+
+% ------------------------------------------------------------
+\section{Research \& Professional Experience}
+
+\entry{FICO}{San Diego}{Analytic Scientist Intern}{Summer 2026}
+\begin{itemize}
+  \item Conducted applied research on cybersecurity problems as part of the analytics research team.
+  \item Developed curriculum for a course taught at Historically Black Colleges and Universities (HBCUs) in Fall 2026.
+  \item Mentored HBCU student interns from the prior year's cohort.
+\end{itemize}
+\vspace{0.5em}
+
+\entry{Naval Research Laboratory}{Remote}{Research Fellow}{June 2025 – September 2025}
+\begin{itemize}
+  \item Selected for the competitive NRL Fellowship to advance machine learning for operational sensing.
+  \item Designed a framework for latent goal inference from trajectory and sensor data using theory-of-mind–inspired models with graph neural networks and world models.
+\end{itemize}
+\vspace{0.5em}
+
+\entry{Naval Information Warfare Center Pacific}{San Diego, CA}{Data Scientist}{August 2021 – May 2025}
+\begin{itemize}
+  \item Led research streams in operational ML deployment and applied anomaly detection, bridging software engineering with novel machine learning methods for defense applications.
+  \item Principal Investigator on a \$90K ONR-funded project developing graph-based models for maritime anomaly detection.
+  \item Designed and deployed containerized ML services for real-time operational analytics, field-tested during RIMPAC 2022.
+\end{itemize}
+
+% ------------------------------------------------------------
+\section{Grants}
+
+\textbf{Naval Innovation Science and Engineering (NISE) Grant}\hfill 2022 – 2023\\
+\textit{Principal Investigator — \$90,000 award for research on anomaly detection in maritime AIS data.}
+
+% ------------------------------------------------------------
+\section{Fellowships \& Awards}
+
+\begin{itemize}
+  \item National Defense Science and Engineering Graduate (NDSEG) Fellowship
+  \item Naval Research Laboratory Fellowship \hfill 2025
+  \item Fellowship at Auschwitz for the Study of Professional Ethics (FASPE) — Design \& Technology Cohort \hfill 2025
+  \item Department of the Navy Civilian Service Achievement Medal \hfill 2023
+\end{itemize}
+
+% ------------------------------------------------------------
+\section{Teaching}
+
+\entry{University of California, San Diego}{}{Teaching Assistant, DSC 260 (Data Science, Ethics, and Society)}{Spring 2026}
+\begin{itemize}
+  \item Foundational concepts (power, justice, bias, privacy, explainability), societal practices (delegation, organizational incentives, accountability), and governance mechanisms (law, regulation, norms).
+\end{itemize}
+\vspace{0.5em}
+
+\entry{University of California, San Diego}{}{Teaching Assistant, DSC 80 (Practice \& Application of Data Science)}{Fall 2025}
+
+\end{document}
