@@ -6,18 +6,45 @@ import React from "react";
 // --- Publications data + helpers ---
 const publications = [
   {
-    year: 2025,
-    title: "Hierarchical Latent Theory of Mind: A Graph-Based Framework for Goal Inference",
-    venue: "AAAI (under review)",
-    authors: ["Nigel Doering", "Rahath Malladi", "Arshia Sangwan", 
-      "M Tanjid Hasan Tonmoy", "Ilya Parker", "Ramesh Bharadwaj", "David Danks", "Tauhidur Rahman"],
-    links: [], // add a preprint link later if you post one
+    year: 2027,
+    title:
+      "Arguing Ethics with a Machine: An AI Chatbot's Ethical Position Is a Property of the System, Not the Model",
+    venue: "Under review, CHI 2027",
+    authors: ["Nigel F. Doering", "Justin Norman", "David Danks", "Tauhidur Rahman"],
+    links: [],
+  },
+  {
+    year: 2026,
+    title: "Structured Machine Theory of Mind from Agent Trajectories",
+    venue: "Transactions on Machine Learning Research (TMLR), 10/2026",
+    authors: [
+      "Nigel Doering", "Rahath Malladi", "Arshia Sangwan",
+      "M Tanjid Hasan Tonmoy", "Jacob Doan", "David Danks", "Tauhidur Rahman",
+    ],
+    links: [
+      { label: "OpenReview", href: "https://openreview.net/forum?id=PfSNLg0zcK" },
+      { label: "Code", href: "https://github.com/NigelDoering/structured-machine-tom" },
+    ],
+  },
+  {
+    year: 2026,
+    title: "HiVAE: Hierarchical Latent Variables for Scalable Theory of Mind",
+    venue: "Theory of Mind for AI Workshop, AAAI-26 · Singapore",
+    authors: ["Nigel Doering", "Rahath Malladi", "Arshia Sangwan", "David Danks", "Tauhidur Rahman"],
+    links: [{ label: "arXiv", href: "https://arxiv.org/abs/2602.16826" }],
+  },
+  {
+    year: 2026,
+    title: "Neuro-Mechanistic Latent Dynamics: Cognitive Load as a Generalizable Neural Stability Margin",
+    venue: "Rejected, NeurIPS 2026 — revising for resubmission",
+    authors: ["M Tanjid Hasan Tonmoy", "Nigel Doering", "Ilya Parker", "Ramesh Bharadwaj", "Tauhidur Rahman"],
+    links: [],
   },
   {
     year: 2025,
     title:
       "Anti-Sensing: Defense against Unauthorized Radar-based Human Vital Sign Sensing with Physically Realizable Wearable Oscillators",
-    venue: "ICLR 2025",
+    venue: "IEEE International Conference on Robotics and Automation (ICRA 2025), 1990–1996",
     authors: [
       "Md Farhan Tasnim Oshim",
       "Nigel Doering",
@@ -25,7 +52,18 @@ const publications = [
       "Tsui-Wei Weng",
       "Tauhidur Rahman",
     ],
-    links: [{ label: "Paper", href: "https://arxiv.org/abs/2505.10864" }],
+    links: [
+      { label: "Paper", href: "https://arxiv.org/abs/2505.10864" },
+      { label: "DOI", href: "https://doi.org/10.1109/ICRA55743.2025.11127941" },
+    ],
+  },
+  {
+    year: 2025,
+    title: "A FASPE Perspective on LLM-Based Chatbots",
+    venue:
+      "FASPE Journal 2025 (Fellowships at Auschwitz for the Study of Professional Ethics), Design & Technology, 64–75",
+    authors: ["Nigel Doering", "Justin Norman"],
+    links: [],
   },
   {
     year: 2024,
@@ -45,6 +83,20 @@ const publications = [
 ];
 
 const experiences = [
+  {
+    role: "Analytic Scientist Intern",
+    company: "FICO",
+    location: "San Diego, CA",
+    date: "Summer 2026",
+    description:
+      "Conducted applied research on cybersecurity problems as part of the analytics research team. Developed curriculum for a course taught at Historically Black Colleges and Universities (HBCUs) in Fall 2026, and mentored HBCU student interns from the prior year's cohort.",
+    skills: [
+      "Applied Research",
+      "Cybersecurity",
+      "Curriculum Development",
+      "Mentorship",
+    ],
+  },
   {
     role: "Data Scientist",
     company: "Naval Information Warfare Center Pacific",
@@ -124,7 +176,7 @@ function ExperienceTimeline() {
 function formatAuthors(authors) {
   return authors
     .map(author => {
-      if (author.toLowerCase().includes("nigel doering")) {
+      if (/^nigel (f\. )?doering$/i.test(author.trim())) {
         return `<strong>${author}</strong>`;
       }
       return author;
@@ -141,7 +193,7 @@ export default function App() {
         <div className="mx-auto max-w-screen px-4 py-4 flex items-center justify-between">
           <a href="/" className="text-brand-700 font-semibold tracking-tight">Nigel Doering</a>
           <nav className="hidden sm:flex items-center gap-6 text-sm">
-            <a href="#pubs" className="hover:text-brand-700">Projects</a>
+            <a href="#pubs" className="hover:text-brand-700">Research</a>
             <a href="#experience" className="hover:text-brand-700">Experience</a>
             <a
               href="#contact"
@@ -200,20 +252,15 @@ export default function App() {
         </p>
 
         <p className="mt-3 text-earth-700 leading-relaxed">
-          My research focuses on applied machine learning for sensing systems, with an emphasis on modeling
-          latent internal states of humans. I’m especially interested in theory of mind, cognitive-state
-          modeling, latent-variable methods, robotics, and health.
+          My research centers on building robust and safe machine learning systems. Specifically, I develop
+          novel evaluation frameworks for LLMs and LLM agents, drawing on theory from social psychology,
+          anthropology, and human cooperation. I’m also interested in human-AI interaction—how AI
+          technologies affect people, and people shape them in turn—with the goal of building technologies
+          and systems that have a beneficial impact on human well-being.
         </p>
 
         <p className="mt-3 text-earth-700 leading-relaxed">
-          Current projects explore inferring agent goals and behaviors from movement data, building
-          generalizable models for spatiotemporal signals, and learning latent mental states from sensor
-          data alone. I’m excited about deploying these methods in complex settings—such as warehouses,
-          care homes, and other environments where safety and human interaction are paramount.
-        </p>
-
-        <p className="mt-3 text-earth-700 leading-relaxed">
-          I’m a recipient of the{" "}
+          I’m a recipient of the National Defense Science and Engineering Graduate (NDSEG) Fellowship, the{" "}
           <a
             href="https://www.faspe-ethics.org/design-technology/"
             target="_blank"
@@ -222,14 +269,12 @@ export default function App() {
           >
             Fellowship at Auschwitz for the Study of Professional Ethics (FASPE) in Design & Technology
           </a>
-          , as well as the Naval Research Laboratory (NRL) 2025 Fellowship.
+          , and the Naval Research Laboratory (NRL) 2025 Fellowship.
         </p>
 
         <p className="mt-3 text-earth-700 leading-relaxed">
           Before my PhD, I worked as a Data Scientist for 5 years at the Naval Information Warfare Center (NIWC)
-          Pacific, developing machine learning solutions for national-security applications. My broader
-          technical interests include human-robot interaction, human modeling, sensor fusion, and the
-          ethical design of AI systems.
+          Pacific, developing machine learning solutions for national-security applications.
         </p>
       </div>
             {/* CTAs (same placement, light theme buttons) */}
@@ -265,7 +310,7 @@ export default function App() {
         {/* Same section structure, just light dividers */}
 
         <section id="pubs" className="py-10 border-t border-earth-200">
-          <h2 className="text-2xl font-semibold text-brand-700 mb-6">Projects</h2>
+          <h2 className="text-2xl font-semibold text-brand-700 mb-6">Research</h2>
 
           <ol className="space-y-5">
             {publications
