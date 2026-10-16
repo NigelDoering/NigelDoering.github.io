@@ -222,7 +222,7 @@ export default function App() {
           </p>
           
           <p className="mt-4 text-earth-700 leading-relaxed">
-            I’m a second year PhD student in Data Science at UC San Diego, where I am co-advised by{" "}
+            I’m a third-year PhD student in Data Science at UC San Diego, where I am co-advised by{" "}
           <a
             href="https://www.tauhidurrahman.com/"
             target="_blank"
