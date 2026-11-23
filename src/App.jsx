@@ -210,7 +210,7 @@ export default function App() {
         <section className="py-14">
           <div className="rounded-xl2 border border-earth-200 bg-white p-8 shadow-soft">
           <div className="flex flex-col md:flex-row gap-8 md:gap-10">
-            <figure className="w-56 md:w-64 shrink-0 mx-auto md:mx-0">
+            <figure className="w-64 md:w-80 shrink-0 mx-auto md:mx-0">
               <img
                 src="/bjj-stripes.jpg"
                 alt="Nigel and his wife in jiu jitsu gis, each holding up a white belt with a new stripe"
@@ -229,7 +229,7 @@ export default function App() {
             <h3 className="mt-3 text-4xl md:text-5xl font-bold text-brand-700 tracking-tight">
               Nigel Doering
             </h3>
-      <div className="max-w-3xl">
+      <div className="max-w-4xl">
         <p className="mt-4 text-earth-700 leading-relaxed">
           Hi! I’m Nigel Doering. 
           
@@ -261,16 +261,33 @@ export default function App() {
             rel="noopener noreferrer"
             className="text-skyish-400 hover:text-skyish-600 underline underline-offset-4"
           >
-            David Danks.
+            David Danks
+          </a>{" "}
+          in the{" "}
+          <a
+            href="https://www.daviddanks.org/diver-lab"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-skyish-400 hover:text-skyish-600 underline underline-offset-4"
+          >
+            Data Intelligence Values Ethics Research (DIVER) Lab
           </a>
+          .
         </p>
 
         <p className="mt-3 text-earth-700 leading-relaxed">
-          My research centers on building robust and safe machine learning systems. Specifically, I develop
-          novel evaluation frameworks for LLMs and LLM agents, drawing on theory from social psychology,
-          theory of mind, anthropology, and human cooperation. I’m also interested in human-AI interaction—how AI
-          technologies affect people, and people shape them in turn—with the goal of building technologies
-          and systems that have a beneficial impact on human well-being.
+          My research sits at the intersection of AI, human-computer interaction, and social science. I study
+          AI as a source of social information: how people update what they believe about the world and about
+          themselves based on what AI systems tell them, and how AI agents, in turn, respond to the social
+          expectations of others. I draw on theory from social psychology, theory of mind, and human cooperation.
+        </p>
+
+        <p className="mt-3 text-earth-700 leading-relaxed">
+          My current work asks whether LLM agents follow rules because of the social norms that form among them,
+          how smartwatch stress scores reshape people’s perceptions of their own stress, and whether the
+          physiological foundation models that increasingly power this kind of feedback perform equally well
+          across demographic groups. Ultimately, I want to build AI systems that people can trust and that
+          support human well-being.
         </p>
 
         <p className="mt-3 text-earth-700 leading-relaxed">
