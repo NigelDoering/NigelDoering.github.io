@@ -294,7 +294,7 @@ export default function App() {
         <p className="mt-3 text-earth-700 leading-relaxed">
           I’m a recipient of the{" "}
           <a
-            href="https://ndseg.org/"
+            href="https://ndseg.org/about"
             target="_blank"
             rel="noopener noreferrer"
             className="text-skyish-400 hover:text-skyish-600 underline underline-offset-4"
