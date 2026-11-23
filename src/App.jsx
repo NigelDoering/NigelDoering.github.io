@@ -9,7 +9,7 @@ const publications = [
     year: 2027,
     title:
       "Arguing Ethics with a Machine: An AI Chatbot's Ethical Position Is a Property of the System, Not the Model",
-    venue: "Under review, CHI 2027",
+    venue: "In preparation for submission to Nature Machine Intelligence",
     authors: ["Nigel F. Doering", "Justin Norman", "David Danks", "Tauhidur Rahman"],
     links: [],
   },
@@ -36,7 +36,7 @@ const publications = [
   {
     year: 2026,
     title: "Neuro-Mechanistic Latent Dynamics: Cognitive Load as a Generalizable Neural Stability Margin",
-    venue: "In revision for resubmission",
+    venue: "Under review, ACM IMWUT (UbiComp)",
     authors: ["M Tanjid Hasan Tonmoy", "Nigel Doering", "Ilya Parker", "Ramesh Bharadwaj", "Tauhidur Rahman"],
     links: [],
   },
