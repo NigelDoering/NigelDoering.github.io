@@ -23,6 +23,7 @@ const publications = [
     ],
     links: [
       { label: "OpenReview", href: "https://openreview.net/forum?id=PfSNLg0zcK" },
+      { label: "arXiv", href: "https://arxiv.org/abs/2611.07208" },
       { label: "Code", href: "https://github.com/NigelDoering/structured-machine-tom" },
     ],
   },
@@ -291,7 +292,16 @@ export default function App() {
         </p>
 
         <p className="mt-3 text-earth-700 leading-relaxed">
-          I’m a recipient of the National Defense Science and Engineering Graduate (NDSEG) Fellowship, the{" "}
+          I’m a recipient of the{" "}
+          <a
+            href="https://ndseg.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-skyish-400 hover:text-skyish-600 underline underline-offset-4"
+          >
+            National Defense Science and Engineering Graduate (NDSEG) Fellowship
+          </a>
+          , the{" "}
           <a
             href="https://www.faspe-ethics.org/design-technology/"
             target="_blank"
